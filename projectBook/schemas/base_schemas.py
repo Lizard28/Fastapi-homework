@@ -8,3 +8,14 @@ class Book(BaseModel):
 class SearchModel(BaseModel):
     title: str = None # наименование книги.
     author: str = None # автор книги.
+
+class BookCreate(BaseModel):
+    title: str
+    author: str
+
+class BookOutputSchemas(BaseModel):
+    message: str
+    book:Book
+
+class UpdateBook(BookCreate):
+    pass
